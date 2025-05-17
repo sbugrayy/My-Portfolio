@@ -5,7 +5,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { motion } from 'framer-motion';
 
 const Nav = styled(motion.nav)`
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(0, 0, 0, 0.4);
   padding: 1rem 2rem;
   position: fixed;
   width: 100%;
@@ -122,7 +122,7 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          Portfolyo
+          Buğra Yıldırım
         </Logo>
         <MenuButton 
           onClick={() => setIsOpen(!isOpen)}

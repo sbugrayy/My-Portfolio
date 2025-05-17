@@ -63,7 +63,7 @@ const AnimatedText = styled(motion.div)`
 
 const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ['Game Developer', 'Web Developer', 'UI/UX Designer'];
+  const roles = ['Game Developer', 'Backend Developer', 'Music Producer'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -99,16 +99,16 @@ const Home = () => {
         transition={{ duration: 0.8, delay: 0.5 }}
       >
         <SocialLink
-          href="https://twitter.com/"
+          href="https://www.youtube.com/@subnine9937"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, color: '#00ff00' }}
           whileTap={{ scale: 0.9 }}
         >
-          <i className="fab fa-twitter"></i>
+          <i className="fab fa-youtube"></i>
         </SocialLink>
         <SocialLink
-          href="https://github.com/"
+          href="https://github.com/sbugrayy"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, color: '#00ff00' }}
@@ -117,13 +117,13 @@ const Home = () => {
           <i className="fab fa-github"></i>
         </SocialLink>
         <SocialLink
-          href="https://facebook.com/"
+          href="https://www.linkedin.com/in/bu%C4%9Fra-y%C4%B1ld%C4%B1r%C4%B1m-b53b28298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
           target="_blank"
           rel="noopener noreferrer"
           whileHover={{ scale: 1.2, color: '#00ff00' }}
           whileTap={{ scale: 0.9 }}
         >
-          <i className="fab fa-facebook"></i>
+          <i className="fab fa-linkedin"></i>
         </SocialLink>
       </SocialLinks>
     </HomeContainer>

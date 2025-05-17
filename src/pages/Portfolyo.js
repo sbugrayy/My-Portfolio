@@ -5,6 +5,8 @@ const PortfolyoContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 2rem;
   background-color: #1a1a1a;
+  overflow-y: auto;
+  height: 100vh;
 `;
 
 const ContentWrapper = styled.div`
@@ -93,28 +95,50 @@ const ProjectLink = styled.a`
 const Portfolyo = () => {
   const projects = [
     {
-      title: "E-Ticaret Platformu",
-      description: "Modern bir e-ticaret platformu. React ve Node.js kullanılarak geliştirildi.",
-      image: "https://via.placeholder.com/400x200",
-      tags: ["React", "Node.js", "MongoDB", "Express"],
-      demoLink: "#",
+      title: "Hızlı Gol",
+      description: "İki Kişilik Web Tabanlı Futbol Oyunu. HTML, CSS ve JavaScript kullanılarak geliştirildi.",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/futbolFoto.png",
+      tags: ["HTML", "CSS", "JavaScript"],
+      demoLink: "https://sbugrayy.github.io/internet-futbol-game/",
+      githubLink: "https://github.com/sbugrayy/internet-futbol-game"
+    },
+    {
+      title: "Yer İstasyonu",
+      description: "Roket Telemetri Verileri İçin Yer İstasyonu. PyQt5 ve QtDesigner ile geliştirildi. Gizlilikten dolayı şuan paylaşılmıyor.",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/yerIstasyonu.png",
+      tags: ["PyQt5", "QtDesigner", "OpenGL"],
       githubLink: "#"
     },
     {
-      title: "Blog Uygulaması",
-      description: "Kişisel blog uygulaması. Kullanıcılar yazılarını paylaşabilir ve yorum yapabilir.",
-      image: "https://via.placeholder.com/400x200",
-      tags: ["React", "Firebase", "Material-UI"],
-      demoLink: "#",
-      githubLink: "#"
+      title: "Safir",
+      description: "EgeKaf GameJam 2025'te geliştirilen ve 2.'likle sonuçlanan 2D platform pixel art oyunu. Unity ile geliştirildi.",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/safir.png",
+      tags: ["Unity", "C#", "FL Studio"],
+      githubLink: "https://github.com/llmergenll/AnlyanPolis"
     },
-    {
-      title: "Task Yönetim Uygulaması",
-      description: "Takım projeleri için görev yönetim uygulaması. Gerçek zamanlı güncelleme özelliği.",
-      image: "https://via.placeholder.com/400x200",
-      tags: ["React", "Socket.io", "Express"],
-      demoLink: "#",
-      githubLink: "#"
+    { 
+      title: "Terlikçi",
+      description: "Balıkesir Teknokent'in düzenlediği GameJam 2025'te geliştirilen 2D pixel art oyunu. Unity ile geliştirildi.",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/terlikci.png",
+      tags: ["Unity", "C#", "FL Studio"],
+      githubLink: "https://github.com/sbugrayy/Gamejam-Proje"
+    },
+    { 
+      title: "Notepad",
+      description: "Notepad++ uygulamasına benzer masaüstü uygulaması. PyQt5 ve QtDesigner ile geliştirildi.",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/notepad.png",
+      tags: ["PyQt5", "QtDesigner"],
+      githubLink: "https://github.com/sbugrayy/Notepad"
+    },
+    { 
+      title: "Hava Durumu",
+      description: "OpenWeatherMap sitesindeki verileri çekerek yapılan masaüstü uygulaması. Hem C# Windows Forms ile hem de PyQt5 ile geliştirildi.",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/havaDurumu.jpg",
+      tags: ["PyQt5", "C#"],
+      githubLinks: {
+        pyqt: "https://github.com/sbugrayy/HavaDurumuPy",
+        csharp: "https://github.com/sbugrayy/Hava-Durumuu"
+      }
     }
   ];
 
@@ -135,12 +159,26 @@ const Portfolyo = () => {
                   ))}
                 </ProjectTags>
                 <ProjectLinks>
-                  <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                    <i className="fas fa-external-link-alt"></i> Demo
-                  </ProjectLink>
-                  <ProjectLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
-                    <i className="fab fa-github"></i> GitHub
-                  </ProjectLink>
+                  {project.title === "Hızlı Gol" && (
+                    <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                      <i className="fas fa-arrow-up-right-from-square"></i> Demo
+                    </ProjectLink>
+                  )}
+
+                  {project.title === "Hava Durumu" ? (
+                    <>
+                      <ProjectLink href={project.githubLinks?.pyqt} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github"></i> GitHub (PyQt5)
+                      </ProjectLink>
+                      <ProjectLink href={project.githubLinks?.csharp} target="_blank" rel="noopener noreferrer">
+                        <i className="fab fa-github"></i> GitHub (C#)
+                      </ProjectLink>
+                    </>
+                  ) : (
+                    <ProjectLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                      <i className="fab fa-github"></i> GitHub
+                    </ProjectLink>
+                  )}
                 </ProjectLinks>
               </ProjectContent>
             </ProjectCard>

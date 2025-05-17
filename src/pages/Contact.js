@@ -170,14 +170,14 @@ const Contact = () => {
           <SubmitButton type="submit">Gönder</SubmitButton>
         </ContactForm>
         <SocialLinks>
-          <SocialLink href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-twitter"></i>
+          <SocialLink href="https://www.youtube.com/@subnine9937" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-youtube"></i>
           </SocialLink>
-          <SocialLink href="https://github.com/" target="_blank" rel="noopener noreferrer">
+          <SocialLink href="https://github.com/sbugrayy" target="_blank" rel="noopener noreferrer">
             <i className="fab fa-github"></i>
           </SocialLink>
-          <SocialLink href="https://facebook.com/" target="_blank" rel="noopener noreferrer">
-            <i className="fab fa-facebook"></i>
+          <SocialLink href="https://www.linkedin.com/in/bu%C4%9Fra-y%C4%B1ld%C4%B1r%C4%B1m-b53b28298?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">
+            <i className="fab fa-linkedin"></i>
           </SocialLink>
         </SocialLinks>
       </ContentWrapper>

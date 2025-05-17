@@ -86,7 +86,7 @@ const About = () => {
       <ContentWrapper>
         <ImageSection>
           <ProfileImage
-            src="/images/profilFoto.jpg"
+            src="https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/profilFoto.jpg"
             alt="Profil Fotoğrafı"
           />
         </ImageSection>
@@ -104,13 +104,12 @@ const About = () => {
             Sürekli kendimi geliştiriyor, oyun motorları ve güncel teknolojileri yakından takip ediyorum.
           </Description>
           <SkillsList>
-            <SkillItem>JavaScript (ES6+)</SkillItem>
-            <SkillItem>React.js</SkillItem>
-            <SkillItem>Node.js</SkillItem>
+            <SkillItem>Unity (C#)</SkillItem>
+            <SkillItem>React</SkillItem>
             <SkillItem>SQL</SkillItem>
             <SkillItem>Git</SkillItem>
             <SkillItem>Java</SkillItem>
-            <SkillItem>Unity (C#)</SkillItem>
+            <SkillItem>JavaScript</SkillItem>
             <SkillItem>FL Studio</SkillItem>
             <SkillItem>Windows Forms (C#)</SkillItem>
             <SkillItem>Python (PyQt5)</SkillItem>

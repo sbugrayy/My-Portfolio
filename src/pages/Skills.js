@@ -5,6 +5,8 @@ const SkillsContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 2rem;
   background-color: #1a1a1a;
+  overflow-y: auto;
+  height: 100vh;
 `;
 
 const ContentWrapper = styled.div`
@@ -56,19 +58,19 @@ const SkillDescription = styled.p`
 const Skills = () => {
   const skillsData = [
     {
+      icon: "🎮",
+      title: "Oyun Geliştirme",
+      description: "Hem PC hem de mobil platformlar için çeşitli oyun türlerinde geliştirme. Unity gibi güçlü araçlarla sürükleyici deneyimler tasarlama."
+    },
+    {
       icon: "💻",
       title: "Web Geliştirme",
       description: "Modern ve responsive web uygulamaları geliştirme. React, Node.js ve diğer modern teknolojileri kullanarak kullanıcı dostu arayüzler oluşturma."
     },
     {
-      icon: "📱",
-      title: "Mobil Uyumluluk",
-      description: "Tüm cihazlarda sorunsuz çalışan, responsive tasarımlar. Mobile-first yaklaşımı ile modern web uygulamaları geliştirme."
-    },
-    {
-      icon: "🔧",
-      title: "Backend Geliştirme",
-      description: "RESTful API'ler, veritabanı yönetimi ve sunucu tarafı uygulamalar geliştirme. Node.js ve Express.js ile güvenli ve ölçeklenebilir backend sistemleri."
+      icon: "🖼️",
+      title: "Görsel Programlama",
+      description: "Modern ve responsive web uygulamaları geliştirme. React, Node.js ve diğer modern teknolojileri kullanarak kullanıcı dostu arayüzler oluşturma."
     },
     {
       icon: "🎨",
@@ -78,12 +80,17 @@ const Skills = () => {
     {
       icon: "📊",
       title: "Veritabanı Yönetimi",
-      description: "SQL ve NoSQL veritabanları ile çalışma. Veritabanı tasarımı, optimizasyonu ve yönetimi konularında deneyim."
+      description: "SQL veritabanları ile çalışma. Veritabanı tasarımı, optimizasyonu ve yönetimi konularında deneyim."
+    },
+    {
+      icon: "🎵", 
+      title: "Müzik Prodüksiyonu",
+      description: "FL Studio kullanarak çeşitli türlerde müzik üretimi ve ses tasarımı."
     },
     {
       icon: "🚀",
       title: "Performans Optimizasyonu",
-      description: "Web uygulamalarının performansını artırma, yükleme sürelerini optimize etme ve kullanıcı deneyimini iyileştirme."
+      description: "Web ve masaüstü uygulamalarının performansını artırma, yükleme sürelerini optimize etme ve kullanıcı deneyimini iyileştirme."
     }
   ];
 
