@@ -1,9 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
+/*
 const PortfolyoContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 2rem;
+  background-color: #1a1a1a;
+  overflow-y: auto;
+  height: 100vh;
+`;
+*/
+
+const PortfolyoContainer = styled.div`
+  min-height: 100vh;
+  padding: 8rem 2rem 4rem;
   background-color: #1a1a1a;
   overflow-y: auto;
   height: 100vh;
