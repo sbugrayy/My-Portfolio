@@ -13,7 +13,7 @@ const PortfolyoContainer = styled.div`
 
 const PortfolyoContainer = styled.div`
   min-height: 100vh;
-  padding: 8rem 2rem 4rem;
+  padding: 8rem 2rem 8rem;
   background-color: #1a1a1a;
   overflow-y: auto;
   height: 100vh;
