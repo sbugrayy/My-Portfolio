@@ -32,7 +32,7 @@ const Title = styled.h2`
 `;
 
 const ContactForm = styled.form`
-  background-color: #2a2a2a;
+  background-color:rgba(42, 42, 42, 0);
   padding: 2rem;
   border-radius: 10px;
 `;
