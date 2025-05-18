@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const AboutContainer = styled.div`
   min-height: 100vh;
-  padding: 2rem;
+  padding: 2rem 2rem 6rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
               url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
