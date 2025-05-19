@@ -176,6 +176,12 @@ const Portfolyo = () => {
                     </ProjectLink>
                   )}
 
+                  {project.title === "Safir" && (
+                      <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                        <i className="fas fa-arrow-up-right-from-square"></i> Demo
+                      </ProjectLink>
+                  )}
+
                   {project.title === "Hava Durumu" ? (
                     <>
                       <ProjectLink href={project.githubLinks?.pyqt} target="_blank" rel="noopener noreferrer">
