@@ -124,6 +124,7 @@ const Portfolyo = () => {
       description: "EgeKaf GameJam 2025'te geliştirilen ve 2.'likle sonuçlanan 2D platform pixel art oyunu. Unity ile geliştirildi.",
       image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/safir.png",
       tags: ["Unity", "C#", "FL Studio"],
+      demoLink: "https://lmergenl.itch.io/safir",
       githubLink: "https://github.com/llmergenll/AnlyanPolis"
     },
     { 
