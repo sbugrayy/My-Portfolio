@@ -105,15 +105,15 @@ const About = () => {
           </Description>
           <SkillsList>
             <SkillItem>Unity (C#)</SkillItem>
+            <SkillItem>Python (PyQt5)</SkillItem>
             <SkillItem>React</SkillItem>
+            <SkillItem>JavaScript</SkillItem>
+            <SkillItem>Arduino (C++)</SkillItem>
             <SkillItem>SQL</SkillItem>
             <SkillItem>Git</SkillItem>
             <SkillItem>Java</SkillItem>
-            <SkillItem>JavaScript</SkillItem>
-            <SkillItem>FL Studio</SkillItem>
             <SkillItem>Windows Forms (C#)</SkillItem>
-            <SkillItem>Python (PyQt5)</SkillItem>
-            <SkillItem>Arduino (C++)</SkillItem>
+            <SkillItem>FL Studio</SkillItem>
           </SkillsList>
         </TextSection>
       </ContentWrapper>
