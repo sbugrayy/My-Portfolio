@@ -84,11 +84,14 @@ const SubmitButton = styled(motion.button)`
   color: #000000;
   padding: 1rem 2rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 2px;
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 100%;
+  
+  margin-left: 17rem;
+  width: 25%;
+  
 
   &:hover {
     background-color: rgba(0, 253, 0, 0.57);

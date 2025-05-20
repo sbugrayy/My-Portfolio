@@ -24,6 +24,7 @@ const Title = styled(motion.h1)`
   font-size: 3.5rem;
   margin-bottom: 1rem;
   color: #ffffff;
+    cursor: default;
   
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -59,6 +60,7 @@ const SocialLink = styled(motion.a)`
 const AnimatedText = styled(motion.div)`
   display: inline-block;
   margin-left: 0.5rem;
+    cursor: default;
 `;
 
 const Home = () => {

@@ -33,7 +33,7 @@ const Title = styled.h2`
   font-weight: 700;
   letter-spacing: -0.5px;
   position: relative;
-  
+  cursor: default;
   
   @media (max-width: 768px) {
     font-size: 2rem;
@@ -58,6 +58,7 @@ const SkillCard = styled.div`
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2.5rem;
   border-radius: 0;
+  cursor: default;
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);

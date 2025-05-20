@@ -49,12 +49,14 @@ const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #00ff00;
+  cursor: default;
 `;
 
 const Description = styled.p`
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
+  cursor: default;
 `;
 
 const SkillsList = styled.ul`
@@ -63,6 +65,7 @@ const SkillsList = styled.ul`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
+  cursor: default;
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
