@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const SkillsContainer = styled.div`
   min-height: 100vh;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
               url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;

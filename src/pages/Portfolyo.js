@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const PortfolyoContainer = styled.div`
   min-height: 100vh;
-  padding: 6rem 2rem;
+  padding: 6rem 2rem 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
               url('https://png.pngtree.com/background/20230527/original/pngtree-d-laptop-pc-with-network-connected-teflon-surface-on-black-background-picture-image_2757429.jpg');
   background-size: cover;
