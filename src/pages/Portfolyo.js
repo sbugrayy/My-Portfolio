@@ -27,7 +27,7 @@ const ContentWrapper = styled.div`
 
 const Title = styled.h2`
   font-size: 2.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
   color: #00ff00;
   text-align: center;
   font-weight: 700;
