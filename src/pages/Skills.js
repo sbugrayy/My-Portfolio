@@ -63,6 +63,11 @@ const Skills = () => {
       description: "Hem PC hem de mobil platformlar için çeşitli oyun türlerinde geliştirme. Unity gibi güçlü araçlarla sürükleyici deneyimler tasarlama."
     },
     {
+      icon: "🚀",
+      title: "Roket Algoritması ve Uygulama",
+      description: "Roket algoritmaları, haberleşme sistemleri kurma ve masaüstü uygulaması geliştirme. Algoritma ve haberleşme sisteminde Arduino (C++), kullanıcı arayüzü için PyQt5 kullanımı."
+    },
+    {
       icon: "💻",
       title: "Web Geliştirme",
       description: "Modern ve responsive web uygulamaları geliştirme. React, Node.js ve diğer modern teknolojileri kullanarak kullanıcı dostu arayüzler oluşturma."
