@@ -28,22 +28,11 @@ const ContentWrapper = styled.div`
 const Title = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 4rem;
-  color: #ffffff;
+  color: #00ff00;
   text-align: center;
   font-weight: 700;
   letter-spacing: -0.5px;
   position: relative;
-  
-  &:after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background-color: #00ff00;
-  }
   
   @media (max-width: 768px) {
     font-size: 2rem;
