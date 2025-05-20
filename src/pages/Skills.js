@@ -93,7 +93,7 @@ const Skills = () => {
       description: "FL Studio kullanarak çeşitli türlerde müzik üretimi ve ses tasarımı."
     },
     {
-      icon: "🚀",
+      icon: "⚡️",
       title: "Performans Optimizasyonu",
       description: "Web ve masaüstü uygulamalarının performansını artırma, yükleme sürelerini optimize etme ve kullanıcı deneyimini iyileştirme."
     }
