@@ -89,7 +89,7 @@ const SubmitButton = styled(motion.button)`
   cursor: pointer;
   transition: all 0.3s ease;
   
-  margin-left: 17rem;
+  margin-left: 17.5rem;
   width: 25%;
   
 
