@@ -5,7 +5,7 @@ const AboutContainer = styled.div`
   min-height: 100vh;
   padding: 2rem 2rem 8rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+              url('https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/laptop1.webp');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -89,7 +89,7 @@ const About = () => {
       <ContentWrapper>
         <ImageSection>
           <ProfileImage
-            src="https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/profilFoto.jpg"
+            src="https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/profilFoto.webp"
             alt="Profil Fotoğrafı"
           />
         </ImageSection>

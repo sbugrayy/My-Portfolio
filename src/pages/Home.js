@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
   text-align: center;
   padding: 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+              url('https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/laptop1.webp');
   background-size: cover;
   background-position: center;
   position: relative;
