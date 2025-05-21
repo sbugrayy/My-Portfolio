@@ -31,6 +31,7 @@ const Title = styled(motion.h2)`
   margin-bottom: 3rem;
   color: #00ff00;
   text-align: center;
+  cursor: default;
 `;
 
 const ContactForm = styled(motion.form)`
@@ -88,9 +89,10 @@ const SubmitButton = styled(motion.button)`
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
-  
-  margin-left: 17.5rem;
-  width: 25%;
+  display: block; 
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
   
 
   &:hover {
