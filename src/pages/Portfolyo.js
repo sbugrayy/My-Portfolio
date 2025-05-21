@@ -191,7 +191,7 @@ const Portfolyo = () => {
     {
       title: "Hızlı Gol",
       description: "İki Kişilik Web Tabanlı Futbol Oyunu. HTML, CSS ve JavaScript kullanılarak geliştirildi.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/futbolFoto.jpg",
+      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/futbolFoto.webp",
       tags: ["HTML", "CSS", "JavaScript", "FL Studio"],
       demoLink: "https://sbugrayy.github.io/internet-futbol-game/",
       githubLink: "https://github.com/sbugrayy/internet-futbol-game"
