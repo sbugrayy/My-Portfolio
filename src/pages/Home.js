@@ -11,7 +11,7 @@ const HomeContainer = styled.div`
   text-align: center;
   padding: 2rem;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/laptop1.webp');
+              url('../../images/laptop1.webp');
   background-size: cover;
   background-position: center;
   position: relative;

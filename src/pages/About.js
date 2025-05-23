@@ -5,7 +5,7 @@ const AboutContainer = styled.div`
   min-height: 100vh;
   padding: 2rem 2rem 8rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/laptop1.webp');
+              url('../../images/laptop1.webp');
   background-size: cover;
   background-position: center;
   color: #ffffff;

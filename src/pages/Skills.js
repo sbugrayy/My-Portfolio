@@ -5,7 +5,7 @@ const SkillsContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/laptop3.webp');
+              url('../../images/laptop3.webp');
   background-size: cover;
   background-position: center;
   overflow-y: auto;

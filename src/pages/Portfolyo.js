@@ -5,16 +5,17 @@ const PortfolyoContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/laptop2.webp');
+              url('../../images/laptop2.webp');
   background-size: cover;
   background-position: center;
   overflow-y: auto;
   height: 100vh;
-  
+
   @media (max-width: 768px) {
     padding: 4rem 1rem;
   }
 `;
+
 
 const ContentWrapper = styled.div`
   max-width: 1200px;
