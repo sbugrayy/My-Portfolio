@@ -191,7 +191,7 @@ const Portfolyo = () => {
     {
       title: "Hızlı Gol",
       description: "İki Kişilik Web Tabanlı Futbol Oyunu. HTML, CSS ve JavaScript kullanılarak geliştirildi.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/futbolFoto.webp",
+      image: "../../images/futbolFoto.webp",
       tags: ["HTML", "CSS", "JavaScript", "FL Studio"],
       demoLink: "https://sbugrayy.github.io/internet-futbol-game/",
       githubLink: "https://github.com/sbugrayy/internet-futbol-game"
@@ -199,14 +199,14 @@ const Portfolyo = () => {
     {
       title: "Yer İstasyonu",
       description: "Roket Telemetri Verileri İçin Yer İstasyonu. PyQt5 ve QtDesigner ile geliştirildi. Gizlilikten dolayı şuan paylaşılmıyor.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/yerIstasyonu.webp",
+      image: "../../images/yerIstasyonu.webp",
       tags: ["PyQt5", "QtDesigner", "OpenGL"],
       githubLink: "#"
     },
     {
       title: "Safir",
       description: "EgeKaf GameJam 2025'te geliştirilen ve 2.'likle sonuçlanan 2D platform pixel art oyunu. Unity ile geliştirildi.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/safir.webp",
+      image: "../../images/safir.webp",
       tags: ["Unity", "C#", "FL Studio"],
       demoLink: "https://lmergenl.itch.io/safir",
       githubLink: "https://github.com/llmergenll/AnlyanPolis"
@@ -214,21 +214,21 @@ const Portfolyo = () => {
     { 
       title: "Terlikçi",
       description: "Balıkesir Teknokent'in düzenlediği GameJam 2025'te geliştirilen 2D pixel art oyunu. Unity ile geliştirildi.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/terlikci.webp",
+      image: "../../images/terlikci.webp",
       tags: ["Unity", "C#", "FL Studio"],
       githubLink: "https://github.com/sbugrayy/Gamejam-Proje"
     },
     { 
       title: "Notepad",
       description: "Notepad++ uygulamasına benzer masaüstü uygulaması. PyQt5 ve QtDesigner ile geliştirildi.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/notepad.webp",
+      image: "../../images/notepad.webp",
       tags: ["PyQt5", "QtDesigner"],
       githubLink: "https://github.com/sbugrayy/Notepad"
     },
     { 
       title: "Hava Durumu",
       description: "OpenWeatherMap sitesindeki verileri çekerek yapılan masaüstü uygulaması. Hem C# Windows Forms ile hem de PyQt5 ile geliştirildi.",
-      image: "https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/havaDurumu.webp",
+      image: "../../images/havaDurumu.webp",
       tags: ["PyQt5", "C#"],
       githubLinks: {
         pyqt: "https://github.com/sbugrayy/HavaDurumuPy",

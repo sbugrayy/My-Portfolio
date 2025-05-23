@@ -89,21 +89,22 @@ const About = () => {
       <ContentWrapper>
         <ImageSection>
           <ProfileImage
-            src="https://raw.githubusercontent.com/sbugrayy/portfolyo/main/public/images/profilFoto.webp"
+            src="../../images/profilFoto.webp"
             alt="Profil Fotoğrafı"
           />
         </ImageSection>
         <TextSection>
           <Title>Ben Kimim?</Title>
           <Description>
-            Merhaba! Ben Buğra, 1 yıllık deneyime sahip bir Game Developer'ım.
-            Yazılım geliştirme tutkum ve sürekli öğrenme isteğimle, modern ve eğlenceli
-            oyunlar geliştiriyorum.
+            Merhaba! Ben Buğra Yıldırım. Yaklaşık 2 yıldır oyun geliştirme, savunma sanayi sistemleri,
+            web geliştirme ve müzik yapımcılığı gibi alanlarla ilgilenen bilgisayar mühendisiyim.
+            Bu süreçte, farklı disiplinleri bir araya getirerek hem teknik hem de sanatsal becerilerimi geliştirmeye odaklandım.
           </Description>
           <Description>
             Oyun geliştirme alanında uzmanlaşmış olup,
             oyuncu deneyimini ön planda tutarak yaratıcı ve etkileşimli projeler geliştiriyorum.
             Oyunlara özel müzikler de üreterek projelere atmosfer ve derinlik katıyorum.
+            Web geliştirme tarafında ise modern teknolojileri kullanarak kullanıcı deneyimini ön planda tutan projeler ürettim.
             Sürekli kendimi geliştiriyor, oyun motorları ve güncel teknolojileri yakından takip ediyorum.
           </Description>
           <SkillsList>
