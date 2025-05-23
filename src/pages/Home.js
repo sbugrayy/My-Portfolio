@@ -10,8 +10,7 @@ const HomeContainer = styled.div`
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-              url('../../images/laptop1.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   position: relative;

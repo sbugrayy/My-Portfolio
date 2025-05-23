@@ -6,8 +6,7 @@ import emailjs from '@emailjs/browser';
 const ContactContainer = styled(motion.div)`
   min-height: 100vh;
   padding: 2rem 2rem 8rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('../../images/klavye.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -38,6 +37,8 @@ const ContactForm = styled(motion.form)`
   background-color:rgba(42, 42, 42, 0);
   padding: 2rem;
   border-radius: 10px;
+  position: relative;
+  z-index: 1;
 `;
 
 const FormGroup = styled(motion.div)`
@@ -124,6 +125,8 @@ const SocialLinks = styled(motion.div)`
   justify-content: center;
   gap: 2rem;
   margin-top: 3rem;
+  position: relative;
+  z-index: 1;
 `;
 
 const SocialLink = styled(motion.a)`
@@ -181,13 +184,60 @@ const Contact = () => {
     }
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
-    <ContactContainer>
-      <ContentWrapper>
-        <Title>İletişim</Title>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <FormGroup>
-            <Label htmlFor="name">Ad Soyad</Label>
+    <ContactContainer
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
+    >
+      <ContentWrapper
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
+        <Title
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          İletişim
+        </Title>
+        <ContactForm
+          ref={form}
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          <FormGroup variants={itemVariants}>
+            <Label
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.3 }}
+            >
+              Ad Soyad
+            </Label>
             <Input
               type="text"
               id="name"
@@ -196,10 +246,20 @@ const Contact = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+              whileFocus={{ scale: 1.02 }}
             />
           </FormGroup>
-          <FormGroup>
-            <Label htmlFor="email">E-posta</Label>
+          <FormGroup variants={itemVariants}>
+            <Label
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.5 }}
+            >
+              E-posta
+            </Label>
             <Input
               type="email"
               id="email"
@@ -208,10 +268,20 @@ const Contact = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.6 }}
+              whileFocus={{ scale: 1.02 }}
             />
           </FormGroup>
-          <FormGroup>
-            <Label htmlFor="message">Mesaj</Label>
+          <FormGroup variants={itemVariants}>
+            <Label
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.7 }}
+            >
+              Mesaj
+            </Label>
             <TextArea
               id="message"
               name="message"
@@ -219,18 +289,30 @@ const Contact = () => {
               onChange={handleChange}
               required
               disabled={isSubmitting}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.3, delay: 0.8 }}
+              whileFocus={{ scale: 1.02 }}
             />
           </FormGroup>
           <SubmitButton 
             type="submit" 
             disabled={isSubmitting}
-            whileHover={{ scale: 1.02 }}
-            whileTap={{ scale: 0.98 }}
+            whileHover={{ scale: 1.05, backgroundColor: "rgba(0, 253, 0, 0.57)", color: "white" }}
+            whileTap={{ scale: 0.95 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.9 }}
           >
             {isSubmitting ? 'Gönderiliyor...' : 'Gönder'}
           </SubmitButton>
           {status.show && (
-            <StatusMessage success={status.success}>
+            <StatusMessage
+              success={status.success}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3 }}
+            >
               {status.message}
             </StatusMessage>
           )}
@@ -238,7 +320,7 @@ const Contact = () => {
         <SocialLinks
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 1 }}
         >
           <SocialLink
             href="https://www.youtube.com/@subnine9937"

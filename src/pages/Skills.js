@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const SkillsContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('../../images/laptop3.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   overflow-y: auto;
@@ -25,7 +25,7 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #00ff00;
@@ -54,7 +54,7 @@ const SkillsGrid = styled.div`
   }
 `;
 
-const SkillCard = styled.div`
+const SkillCard = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.7);
   padding: 2.5rem;
   border-radius: 0;
@@ -62,6 +62,8 @@ const SkillCard = styled.div`
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
   
   &:hover {
     transform: translateY(-10px);
@@ -74,7 +76,7 @@ const SkillCard = styled.div`
   }
 `;
 
-const SkillIcon = styled.div`
+const SkillIcon = styled(motion.div)`
   font-size: 3rem;
   color: #00ff00;
   margin-bottom: 1.5rem;
@@ -89,7 +91,7 @@ const SkillIcon = styled.div`
   }
 `;
 
-const SkillTitle = styled.h3`
+const SkillTitle = styled(motion.h3)`
   font-size: 1.8rem;
   color: #ffffff;
   margin-bottom: 1rem;
@@ -101,7 +103,7 @@ const SkillTitle = styled.h3`
   }
 `;
 
-const SkillDescription = styled.p`
+const SkillDescription = styled(motion.p)`
   color: #cccccc;
   line-height: 1.8;
   font-size: 1.1rem;
@@ -156,16 +158,71 @@ const Skills = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <SkillsContainer>
       <ContentWrapper>
-        <Title>Neler Yapabilirim?</Title>
-        <SkillsGrid>
+        <Title
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Neler Yapabilirim?
+        </Title>
+        <SkillsGrid
+          as={motion.div}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {skillsData.map((skill, index) => (
-            <SkillCard key={index}>
-              <SkillIcon>{skill.icon}</SkillIcon>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillDescription>{skill.description}</SkillDescription>
+            <SkillCard
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <SkillIcon
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                {skill.icon}
+              </SkillIcon>
+              <SkillTitle
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
+              >
+                {skill.title}
+              </SkillTitle>
+              <SkillDescription
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+              >
+                {skill.description}
+              </SkillDescription>
             </SkillCard>
           ))}
         </SkillsGrid>

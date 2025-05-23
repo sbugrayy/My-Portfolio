@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const PortfolyoContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('../../images/laptop2.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   overflow-y: auto;
@@ -16,7 +16,6 @@ const PortfolyoContainer = styled.div`
   }
 `;
 
-
 const ContentWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
@@ -26,7 +25,7 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
   font-size: 2.5rem;
   margin-bottom: 1rem;
   color: #00ff00;
@@ -43,7 +42,7 @@ const Title = styled.h2`
   }
 `;
 
-const ProjectsGrid = styled.div`
+const ProjectsGrid = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 3rem;
@@ -55,7 +54,7 @@ const ProjectsGrid = styled.div`
   }
 `;
 
-const ProjectCard = styled.div`
+const ProjectCard = styled(motion.div)`
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 0;
   overflow: hidden;
@@ -63,6 +62,8 @@ const ProjectCard = styled.div`
   transition: all 0.3s ease;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
   
   &:hover {
     transform: translateY(-10px);
@@ -75,7 +76,7 @@ const ProjectCard = styled.div`
   }
 `;
 
-const ProjectImage = styled.img`
+const ProjectImage = styled(motion.img)`
   width: 100%;
   height: 250px;
   object-fit: cover;
@@ -90,7 +91,7 @@ const ProjectImage = styled.img`
   }
 `;
 
-const ProjectContent = styled.div`
+const ProjectContent = styled(motion.div)`
   padding: 2rem;
   
   @media (max-width: 768px) {
@@ -98,7 +99,7 @@ const ProjectContent = styled.div`
   }
 `;
 
-const ProjectTitle = styled.h3`
+const ProjectTitle = styled(motion.h3)`
   font-size: 1.8rem;
   color: #ffffff;
   margin-bottom: 1rem;
@@ -110,7 +111,7 @@ const ProjectTitle = styled.h3`
   }
 `;
 
-const ProjectDescription = styled.p`
+const ProjectDescription = styled(motion.p)`
   color: #cccccc;
   margin-bottom: 1.5rem;
   line-height: 1.8;
@@ -122,7 +123,7 @@ const ProjectDescription = styled.p`
   }
 `;
 
-const ProjectTags = styled.div`
+const ProjectTags = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
@@ -133,7 +134,7 @@ const ProjectTags = styled.div`
   }
 `;
 
-const Tag = styled.span`
+const Tag = styled(motion.span)`
   background-color: rgba(255, 255, 255, 0.1);
   color: #ffffff;
   padding: 0.5rem 1rem;
@@ -151,7 +152,7 @@ const Tag = styled.span`
   }
 `;
 
-const ProjectLinks = styled.div`
+const ProjectLinks = styled(motion.div)`
   display: flex;
   gap: 1.5rem;
   margin-top: 1.5rem;
@@ -164,7 +165,7 @@ const ProjectLinks = styled.div`
   }
 `;
 
-const ProjectLink = styled.a`
+const ProjectLink = styled(motion.a)`
   color: #ffffff;
   text-decoration: none;
   display: flex;
@@ -238,46 +239,144 @@ const Portfolyo = () => {
     }
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <PortfolyoContainer>
       <ContentWrapper>
-        <Title>Portfolyo</Title>
-        <ProjectsGrid>
+        <Title
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          Portfolyo
+        </Title>
+        <ProjectsGrid
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {projects.map((project, index) => (
-            <ProjectCard key={index}>
-              <ProjectImage src={project.image} alt={project.title} />
+            <ProjectCard
+              key={index}
+              variants={itemVariants}
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+            >
+              <ProjectImage
+                src={project.image}
+                alt={project.title}
+                initial={{ scale: 0.8, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              />
               <ProjectContent>
-                <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectDescription>{project.description}</ProjectDescription>
-                <ProjectTags>
+                <ProjectTitle
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 + 0.2 }}
+                >
+                  {project.title}
+                </ProjectTitle>
+                <ProjectDescription
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 + 0.3 }}
+                >
+                  {project.description}
+                </ProjectDescription>
+                <ProjectTags
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 + 0.4 }}
+                >
                   {project.tags.map((tag, tagIndex) => (
-                    <Tag key={tagIndex}>{tag}</Tag>
+                    <Tag
+                      key={tagIndex}
+                      whileHover={{ scale: 1.1, backgroundColor: "#00cc00" }}
+                      whileTap={{ scale: 0.9 }}
+                    >
+                      {tag}
+                    </Tag>
                   ))}
                 </ProjectTags>
-                <ProjectLinks>
+                <ProjectLinks
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 + 0.5 }}
+                >
                   {project.title === "Hızlı Gol" && (
-                    <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
+                    <ProjectLink
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 5, color: "#00ff00" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
                       <i className="fas fa-arrow-up-right-from-square"></i> Demo
                     </ProjectLink>
                   )}
 
                   {project.title === "Safir" && (
-                      <ProjectLink href={project.demoLink} target="_blank" rel="noopener noreferrer">
-                        <i className="fas fa-arrow-up-right-from-square"></i> Demo
-                      </ProjectLink>
+                    <ProjectLink
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 5, color: "#00ff00" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      <i className="fas fa-arrow-up-right-from-square"></i> Demo
+                    </ProjectLink>
                   )}
 
                   {project.title === "Hava Durumu" ? (
                     <>
-                      <ProjectLink href={project.githubLinks?.pyqt} target="_blank" rel="noopener noreferrer">
+                      <ProjectLink
+                        href={project.githubLinks?.pyqt}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ x: 5, color: "#00ff00" }}
+                        whileTap={{ scale: 0.95 }}
+                      >
                         <i className="fab fa-github"></i> GitHub (PyQt5)
                       </ProjectLink>
-                      <ProjectLink href={project.githubLinks?.csharp} target="_blank" rel="noopener noreferrer">
+                      <ProjectLink
+                        href={project.githubLinks?.csharp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        whileHover={{ x: 5, color: "#00ff00" }}
+                        whileTap={{ scale: 0.95 }}
+                      >
                         <i className="fab fa-github"></i> GitHub (C#)
                       </ProjectLink>
                     </>
                   ) : (
-                    <ProjectLink href={project.githubLink} target="_blank" rel="noopener noreferrer">
+                    <ProjectLink
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      whileHover={{ x: 5, color: "#00ff00" }}
+                      whileTap={{ scale: 0.95 }}
+                    >
                       <i className="fab fa-github"></i> GitHub
                     </ProjectLink>
                   )}

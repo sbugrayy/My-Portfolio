@@ -9,11 +9,14 @@ import Skills from './pages/Skills';
 import Portfolyo from './pages/Portfolyo';
 import Contact from './pages/Contact';
 import PageTransition from './components/PageTransition';
+import ParticlesBackground from './components/ParticlesBackground';
 
 const AppContainer = styled.div`
   min-height: 100vh;
   background-color: #1a1a1a;
   color: #ffffff;
+  position: relative;
+  overflow: hidden;
 `;
 
 const AnimatedRoutes = () => {
@@ -36,6 +39,7 @@ function App() {
   return (
     <Router>
       <AppContainer>
+        <ParticlesBackground />
         <Navbar />
         <AnimatedRoutes />
       </AppContainer>

@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 const AboutContainer = styled.div`
   min-height: 100vh;
   padding: 2rem 2rem 8rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-              url('../../images/laptop1.webp');
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -29,50 +29,56 @@ const ContentWrapper = styled.div`
   }
 `;
 
-const ImageSection = styled.div`
+const ImageSection = styled(motion.div)`
   display: flex;
   justify-content: center;
   align-items: center;
 `;
 
-const ProfileImage = styled.img`
+const ProfileImage = styled(motion.img)`
   max-width: 100%;
   border-radius: 10px;
   box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
 `;
 
-const TextSection = styled.div`
+const TextSection = styled(motion.div)`
   color: #ffffff;
 `;
 
-const Title = styled.h2`
+const Title = styled(motion.h2)`
   font-size: 2.5rem;
   margin-bottom: 2rem;
   color: #00ff00;
   cursor: default;
+  position: relative;
+  z-index: 1;
 `;
 
-const Description = styled.p`
+const Description = styled(motion.p)`
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1.5rem;
   cursor: default;
+  position: relative;
+  z-index: 1;
 `;
 
-const SkillsList = styled.ul`
+const SkillsList = styled(motion.ul)`
   list-style: none;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   cursor: default;
+  position: relative;
+  z-index: 1;
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 `;
 
-const SkillItem = styled.li`
+const SkillItem = styled(motion.li)`
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -84,40 +90,89 @@ const SkillItem = styled.li`
 `;
 
 const About = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5
+      }
+    }
+  };
+
   return (
     <AboutContainer>
       <ContentWrapper>
-        <ImageSection>
+        <ImageSection
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
           <ProfileImage
             src="../../images/profilFoto.webp"
             alt="Profil Fotoğrafı"
+            initial={{ scale: 0.8, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{ scale: 1.05 }}
           />
         </ImageSection>
-        <TextSection>
-          <Title>Ben Kimim?</Title>
-          <Description>
+        <TextSection
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          <Title
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            Ben Kimim?
+          </Title>
+          <Description variants={itemVariants}>
             Merhaba! Ben Buğra Yıldırım. Yaklaşık 2 yıldır oyun geliştirme, savunma sanayi sistemleri,
             web geliştirme ve müzik yapımcılığı gibi alanlarla ilgilenen bilgisayar mühendisiyim.
             Bu süreçte, farklı disiplinleri bir araya getirerek hem teknik hem de sanatsal becerilerimi geliştirmeye odaklandım.
           </Description>
-          <Description>
+          <Description variants={itemVariants}>
             Oyun geliştirme alanında uzmanlaşmış olup,
             oyuncu deneyimini ön planda tutarak yaratıcı ve etkileşimli projeler geliştiriyorum.
             Oyunlara özel müzikler de üreterek projelere atmosfer ve derinlik katıyorum.
             Web geliştirme tarafında ise modern teknolojileri kullanarak kullanıcı deneyimini ön planda tutan projeler ürettim.
             Sürekli kendimi geliştiriyor, oyun motorları ve güncel teknolojileri yakından takip ediyorum.
           </Description>
-          <SkillsList>
-            <SkillItem>Unity (C#)</SkillItem>
-            <SkillItem>Python (PyQt5)</SkillItem>
-            <SkillItem>React</SkillItem>
-            <SkillItem>JavaScript</SkillItem>
-            <SkillItem>Arduino (C++)</SkillItem>
-            <SkillItem>SQL</SkillItem>
-            <SkillItem>Git</SkillItem>
-            <SkillItem>Java</SkillItem>
-            <SkillItem>Windows Forms (C#)</SkillItem>
-            <SkillItem>FL Studio</SkillItem>
+          <SkillsList variants={containerVariants}>
+            {[
+              "Unity (C#)",
+              "Python (PyQt5)",
+              "React",
+              "JavaScript",
+              "Arduino (C++)",
+              "SQL",
+              "Git",
+              "Java",
+              "Windows Forms (C#)",
+              "FL Studio"
+            ].map((skill, index) => (
+              <SkillItem
+                key={index}
+                variants={itemVariants}
+                whileHover={{ x: 10, color: "#00ff00" }}
+              >
+                {skill}
+              </SkillItem>
+            ))}
           </SkillsList>
         </TextSection>
       </ContentWrapper>
