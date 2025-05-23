@@ -132,7 +132,7 @@ const Skills = () => {
     {
       icon: "🖼️",
       title: "Görsel Programlama",
-      description: "Modern ve responsive web uygulamaları geliştirme. React, Node.js ve diğer modern teknolojileri kullanarak kullanıcı dostu arayüzler oluşturma."
+      description: "PyQt5 ile seri port üzerinden veri okuma, verileri görsel olarak OpenGL ile grafiklerle sunma, modern arayüzlü uygulamalar geliştirme. C# Windows Forms kullanarak temel kullanıcı arayüzleri ve veri işleme özelliklerine sahip uygulamalar geliştirme. "
     },
     {
       icon: "🎨",
