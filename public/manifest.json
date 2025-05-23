@@ -5,16 +5,16 @@
     {
       "src": "images/logo2.png",
       "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/jpeg"
+      "type": "image/png"
     },
     {
       "src": "images/logo2.png",
-      "type": "image/jpeg",
+      "type": "image/png",
       "sizes": "192x192"
     },
     {
       "src": "images/logo2.png",
-      "type": "image/jpeg",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
