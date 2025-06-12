@@ -50,7 +50,7 @@ const SkillsGrid = styled.div`
   
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+  gap: 2rem;
   }
 `;
 
@@ -110,7 +110,7 @@ const SkillDescription = styled(motion.p)`
   
   @media (max-width: 768px) {
     font-size: 1rem;
-    line-height: 1.6;
+  line-height: 1.6;
   }
 `;
 
