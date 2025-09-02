@@ -194,7 +194,7 @@ const Portfolyo = () => {
       title: "İKA Kontrol Sistemi",
       description: "Savunma Sanayi Uygulaması. WebRTC, PyQt6, PyQt6-WebEngine, FireBase, Python, JavaScript kullanılarak geliştirildi. Gizlilikten dolayı şuan paylaşılmıyor.",
       image: "../../images/ikaApp.webp",
-      tags: ["WebRTC", "PyQt6", "PyQt6-WebEngine", "FireBase", "Python", "JavaScript"],
+      tags: ["WebRTC", "PyQt6", "PyQt6-WebEngine", "FireBase", "Python", "JavaScript", "HTML"],
       githubLink: "https://github.com/sbugrayy/IkaApp"
     },
     {
