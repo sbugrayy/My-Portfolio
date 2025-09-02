@@ -163,8 +163,11 @@ const Contact = () => {
     setStatus({ show: false, success: false, message: '' });
 
     try {
-      await emailjs.sendForm( 
+      await emailjs.sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
         form.current,
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
 
       setStatus({
@@ -174,6 +177,7 @@ const Contact = () => {
       });
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
+      console.error('EmailJS Error:', error);
       setStatus({
         show: true,
         success: false,
