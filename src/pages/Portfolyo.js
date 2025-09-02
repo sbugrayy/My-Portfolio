@@ -191,19 +191,18 @@ const ProjectLink = styled(motion.a)`
 const Portfolyo = () => {
   const projects = [
     {
-      title: "Hızlı Gol",
-      description: "İki Kişilik Web Tabanlı Futbol Oyunu. HTML, CSS ve JavaScript kullanılarak geliştirildi.",
-      image: "../../images/futbolFoto.webp",
-      tags: ["HTML", "CSS", "JavaScript", "FL Studio"],
-      demoLink: "https://sbugrayy.github.io/internet-futbol-game/",
-      githubLink: "https://github.com/sbugrayy/internet-futbol-game"
+      title: "İKA Kontrol Sistemi",
+      description: "Savunma Sanayi Uygulaması. WebRTC, PyQt6, PyQt6-WebEngine, FireBase, Python, JavaScript kullanılarak geliştirildi. Gizlilikten dolayı şuan paylaşılmıyor.",
+      image: "../../images/IkaApp.webp",
+      tags: ["WebRTC", "PyQt6", "PyQt6-WebEngine", "FireBase", "Python", "JavaScript"],
+      githubLink: "https://github.com/sbugrayy/IkaApp"
     },
     {
       title: "Yer İstasyonu",
-      description: "Roket Telemetri Verileri İçin Yer İstasyonu. PyQt5 ve QtDesigner ile geliştirildi. Gizlilikten dolayı şuan paylaşılmıyor.",
+      description: "Roket Telemetri Verileri İçin Yer İstasyonu. PyQt5 ve QtDesigner ile geliştirildi.",
       image: "../../images/yerIstasyonu.webp",
       tags: ["PyQt5", "QtDesigner", "OpenGL"],
-      githubLink: "#"
+      githubLink: "https://github.com/sbugrayy/Ground-Station"
     },
     {
       title: "Safir",
@@ -213,12 +212,48 @@ const Portfolyo = () => {
       demoLink: "https://lmergenl.itch.io/safir",
       githubLink: "https://github.com/llmergenll/AnlyanPolis"
     },
+    {
+      title: "Hızlı Gol",
+      description: "İki Kişilik Web Tabanlı Futbol Oyunu. HTML, CSS ve JavaScript kullanılarak geliştirildi.",
+      image: "../../images/futbolFoto.webp",
+      tags: ["HTML", "CSS", "JavaScript", "FL Studio"],
+      demoLink: "https://sbugrayy.github.io/internet-futbol-game/",
+      githubLink: "https://github.com/sbugrayy/internet-futbol-game"
+    },
     { 
       title: "Terlikçi",
       description: "Balıkesir Teknokent'in düzenlediği GameJam 2025'te geliştirilen 2D pixel art oyunu. Unity ile geliştirildi.",
       image: "../../images/terlikci.webp",
       tags: ["Unity", "C#", "FL Studio"],
-      githubLink: "https://github.com/sbugrayy/Gamejam-Proje"
+      githubLink: "https://github.com/sbugrayy/Terlikci"
+    },
+    { 
+      title: "Farm Game",
+      description: "Udemy'deki bir kurs ile geliştirilen 3D izometrik hyper casual oyun. Unity ile geliştirildi.",
+      image: "../../images/farmGame.webp",
+      tags: ["Unity", "C#", "FL Studio"],
+      githubLink: "https://github.com/sbugrayy/Farm-Game"
+    },
+    { 
+      title: "Portfolyo Web Sitesi 1",
+      description: "Kendime ait portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
+      image: "../../images/portfolyoBugra.webp",
+      tags: ["React", "JavaScript", "HTML", "CSS", "EmailJS"],
+      githubLink: "https://github.com/sbugrayy/My-Portfolio"
+    },
+    { 
+      title: "Portfolyo Web Sitesi 2",
+      description: "Musa Yücesan için yapılan portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
+      image: "../../images/portfolyoMusa.webp",
+      tags: ["React", "JavaScript", "HTML", "CSS"],
+      githubLink: "https://github.com/sbugrayy/portfolio-musa"
+    },
+    { 
+      title: "Tobacco App",
+      description: "Küçük işletmeler için yapılmış basit bir kayıt uygulaması. PyQt5, SQL, Python kullanılarak geliştirildi.",
+      image: "../../images/tobaccoApp.webp",
+      tags: ["PyQt5", "SQL", "Python"],
+      githubLink: "https://github.com/sbugrayy/Tobacco-App"
     },
     { 
       title: "Notepad",
@@ -233,8 +268,8 @@ const Portfolyo = () => {
       image: "../../images/havaDurumu.webp",
       tags: ["PyQt5", "C#"],
       githubLinks: {
-        pyqt: "https://github.com/sbugrayy/HavaDurumuPy",
-        csharp: "https://github.com/sbugrayy/Hava-Durumuu"
+        pyqt: "https://github.com/sbugrayy/Weather-App-Python",
+        csharp: "https://github.com/sbugrayy/Weather-App"
       }
     }
   ];

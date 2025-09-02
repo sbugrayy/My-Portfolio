@@ -141,8 +141,8 @@ const About = () => {
             Ben Kimim?
           </Title>
           <Description variants={itemVariants}>
-            Merhaba! Ben Buğra Yıldırım. Yaklaşık 2 yıldır oyun geliştirme, savunma sanayi sistemleri,
-            web geliştirme ve müzik yapımcılığı gibi alanlarla ilgilenen bilgisayar mühendisiyim.
+            Merhaba! Ben Buğra Yıldırım. Yaklaşık 3 yıldır oyun geliştirme, savunma sanayi sistemleri,
+            web ve masaüstü aplikasyonları geliştirme ve müzik yapımcılığı gibi alanlarla ilgilenen bilgisayar mühendisiyim.
             Bu süreçte, farklı disiplinleri bir araya getirerek hem teknik hem de sanatsal becerilerimi geliştirmeye odaklandım.
           </Description>
           <Description variants={itemVariants}>
@@ -160,7 +160,7 @@ const About = () => {
               "JavaScript",
               "Arduino (C++)",
               "SQL",
-              "Git",
+              "Git & GitHub",
               "Java",
               "Windows Forms (C#)",
               "FL Studio"

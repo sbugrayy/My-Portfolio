@@ -123,18 +123,18 @@ const Skills = () => {
     },
     {
       icon: "🚀",
-      title: "Roket Algoritması ve Uygulama",
-      description: "Roket algoritmaları, haberleşme sistemleri kurma ve masaüstü uygulaması geliştirme. Algoritma ve haberleşme sisteminde Arduino (C++), kullanıcı arayüzü için PyQt5 kullanımı."
+      title: "Masaüstü Uygulama Geliştirme",
+      description: "Roket algoritmaları, sensör ve görüntü haberleşme sistemleri kurma ve masaüstü uygulaması geliştirme. Algoritmada ve sensör haberleşme sisteminde Arduino (C++), görüntü haberleşme sistemi için Python,kullanıcı arayüzü için PyQt kullanımı."
     },
     {
       icon: "💻",
       title: "Web Geliştirme",
-      description: "Modern ve responsive web uygulamaları geliştirme. React, Node.js ve diğer modern teknolojileri kullanarak kullanıcı dostu arayüzler oluşturma."
+      description: "Modern ve responsive web uygulamaları geliştirme. React ve diğer modern teknolojileri kullanarak kullanıcı dostu arayüzler oluşturma."
     },
     {
       icon: "🖼️",
       title: "Görsel Programlama",
-      description: "PyQt5 ile seri port üzerinden veri okuma, verileri görsel olarak OpenGL ile grafiklerle sunma, modern arayüzlü uygulamalar geliştirme. C# Windows Forms kullanarak temel kullanıcı arayüzleri ve veri işleme özelliklerine sahip uygulamalar geliştirme. "
+      description: "PyQt ile seri port üzerinden veri okuma, verileri görsel olarak OpenGL ile grafiklerle sunma, modern arayüzlü uygulamalar geliştirme. C# Windows Forms kullanarak temel kullanıcı arayüzleri ve veri işleme özelliklerine sahip uygulamalar geliştirme. "
     },
     {
       icon: "🎨",

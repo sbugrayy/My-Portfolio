@@ -64,7 +64,7 @@ const AnimatedText = styled(motion.div)`
 
 const Home = () => {
   const [currentRole, setCurrentRole] = useState(0);
-  const roles = ['Game Developer', 'Backend Developer', 'Music Producer'];
+  const roles = ['Computer Engineer', 'Game Development', 'Web & Application Development', 'Music Production'];
 
   useEffect(() => {
     const interval = setInterval(() => {
