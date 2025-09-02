@@ -235,14 +235,7 @@ const Portfolyo = () => {
       githubLink: "https://github.com/sbugrayy/Farm-Game"
     },
     { 
-      title: "Portfolyo Web Sitesi 1",
-      description: "Kendime ait portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
-      image: "../../images/logo2.webp",
-      tags: ["React", "JavaScript", "HTML", "CSS", "EmailJS"],
-      githubLink: "https://github.com/sbugrayy/My-Portfolio"
-    },
-    { 
-      title: "Portfolyo Web Sitesi 2",
+      title: "Portfolyo Web Sitesi",
       description: "Musa Yücesan için yapılan portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
       image: "../../images/portfolyoMusa.webp",
       tags: ["React", "JavaScript", "HTML", "CSS"],
