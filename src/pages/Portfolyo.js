@@ -193,7 +193,7 @@ const Portfolyo = () => {
     {
       title: "İKA Kontrol Sistemi",
       description: "Savunma Sanayi Uygulaması. WebRTC, PyQt6, PyQt6-WebEngine, FireBase, Python, JavaScript kullanılarak geliştirildi. Gizlilikten dolayı şuan paylaşılmıyor.",
-      image: "../../images/IkaApp.webp",
+      image: "../../images/ikaApp.webp",
       tags: ["WebRTC", "PyQt6", "PyQt6-WebEngine", "FireBase", "Python", "JavaScript"],
       githubLink: "https://github.com/sbugrayy/IkaApp"
     },
@@ -237,7 +237,7 @@ const Portfolyo = () => {
     { 
       title: "Portfolyo Web Sitesi 1",
       description: "Kendime ait portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
-      image: "../../images/portfolyoBugra.webp",
+      image: "../../images/logo2.webp",
       tags: ["React", "JavaScript", "HTML", "CSS", "EmailJS"],
       githubLink: "https://github.com/sbugrayy/My-Portfolio"
     },
