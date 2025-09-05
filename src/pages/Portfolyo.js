@@ -9,7 +9,7 @@ const PortfolyoContainer = styled.div`
   background: transparent;
   background-size: cover;
   background-position: center;
-  overflow-y: auto;
+  overflow: visible;
   height: 100vh;
 
   @media (max-width: 768px) {

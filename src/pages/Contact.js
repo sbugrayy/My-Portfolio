@@ -10,8 +10,7 @@ const ContactContainer = styled(motion.div)`
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  overflow: hidden;
-  overflow-y: auto;
+  overflow: visible;
   height: 100vh;
 `;
 

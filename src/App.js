@@ -16,7 +16,7 @@ const AppContainer = styled.div`
   background-color: #1a1a1a;
   color: #ffffff;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 `;
 
 const AnimatedRoutes = () => {
@@ -61,9 +61,10 @@ function App() {
             position: 'fixed',
             top: 0,
             left: 0,
-            width: '100%',
-            height: '100%',
-            zIndex: -1,
+            width: '100vw',
+            height: '100vh',
+            zIndex: -10,
+            pointerEvents: 'none',
           }}
         />
         <Navbar />
