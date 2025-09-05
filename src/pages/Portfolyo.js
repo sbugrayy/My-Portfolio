@@ -239,6 +239,7 @@ const Portfolyo = () => {
       description: "Musa Yücesan için yapılan portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
       image: "../../images/portfolyoMusa.webp",
       tags: ["React", "JavaScript", "HTML", "CSS"],
+      demoLink: "https://musayucesan.vercel.app/",
       githubLink: "https://github.com/sbugrayy/portfolio-musa"
     },
     { 
