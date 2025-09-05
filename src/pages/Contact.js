@@ -6,7 +6,7 @@ import emailjs from '@emailjs/browser';
 const ContactContainer = styled(motion.div)`
   min-height: 100vh;
   padding: 2rem 2rem 8rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background: transparent;
   background-size: cover;
   background-position: center;
   color: #ffffff;

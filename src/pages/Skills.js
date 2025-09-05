@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const SkillsContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background: transparent;
   background-size: cover;
   background-position: center;
   overflow-y: auto;

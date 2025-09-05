@@ -6,7 +6,7 @@ import CardSwap, { Card } from '../components/CardSwap';
 const PortfolyoContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+  background: transparent;
   background-size: cover;
   background-position: center;
   overflow-y: auto;
@@ -240,7 +240,7 @@ const Portfolyo = () => {
       description: "Musa Yücesan için yapılan portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
       image: "../../images/portfolyoMusa.webp",
       tags: ["React", "JavaScript", "HTML", "CSS"],
-      demoLink: "https://musayucesan.vercel.app/",
+      demoLink: "https://musayucesan  .vercel.app/",
       githubLink: "https://github.com/sbugrayy/portfolio-musa"
     },
     { 
