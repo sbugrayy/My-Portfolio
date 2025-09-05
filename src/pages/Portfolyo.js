@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import CardSwap, { Card } from '../components/CardSwap';
 
 const PortfolyoContainer = styled.div`
   min-height: 100vh;
   padding: 8rem 2rem 6rem;
-  background: transparent;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
-  overflow: visible;
+  overflow-y: auto;
   height: 100vh;
 
   @media (max-width: 768px) {
@@ -240,7 +239,7 @@ const Portfolyo = () => {
       description: "Musa Yücesan için yapılan portfolyo web sitesi. React, Framer Motion, Styled Components kullanılarak geliştirildi.",
       image: "../../images/portfolyoMusa.webp",
       tags: ["React", "JavaScript", "HTML", "CSS"],
-      demoLink: "https://musayucesan  .vercel.app/",
+      demoLink: "https://musayucesan.vercel.app/",
       githubLink: "https://github.com/sbugrayy/portfolio-musa"
     },
     { 
@@ -416,29 +415,6 @@ const Portfolyo = () => {
           ))}
         </ProjectsGrid>
       </ContentWrapper>
-      
-      {/* CardSwap Animation */}
-      <div style={{ height: '600px', position: 'relative' }}>
-        <CardSwap
-          cardDistance={60}
-          verticalDistance={70}
-          delay={5000}
-          pauseOnHover={false}
-        >
-          <Card>
-            <h3>Card 1</h3>
-            <p>Your content here</p>
-          </Card>
-          <Card>
-            <h3>Card 2</h3>
-            <p>Your content here</p>
-          </Card>
-          <Card>
-            <h3>Card 3</h3>
-            <p>Your content here</p>
-          </Card>
-        </CardSwap>
-      </div>
     </PortfolyoContainer>
   );
 };

@@ -6,11 +6,12 @@ import emailjs from '@emailjs/browser';
 const ContactContainer = styled(motion.div)`
   min-height: 100vh;
   padding: 2rem 2rem 8rem;
-  background: transparent;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   background-size: cover;
   background-position: center;
   color: #ffffff;
-  overflow: visible;
+  overflow: hidden;
+  overflow-y: auto;
   height: 100vh;
 `;
 
