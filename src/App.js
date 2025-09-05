@@ -9,7 +9,7 @@ import Skills from './pages/Skills';
 import Portfolyo from './pages/Portfolyo';
 import Contact from './pages/Contact';
 import PageTransition from './components/PageTransition';
-import FaultyTerminal from './components/FaultyTerminal';
+import FaultyTerminalBackground from './components/FaultyTerminalBackground';
 
 const AppContainer = styled.div`
   min-height: 100vh;
@@ -39,7 +39,7 @@ function App() {
   return (
     <Router>
       <AppContainer>
-        <FaultyTerminal
+        <FaultyTerminalBackground
           scale={1.5}
           gridMul={[2, 1]}
           digitSize={1.2}
@@ -57,15 +57,6 @@ function App() {
           mouseStrength={0.5}
           pageLoadAnimation={false}
           brightness={1}
-          style={{
-            position: 'fixed',
-            top: 0,
-            left: 0,
-            width: '100vw',
-            height: '100vh',
-            zIndex: -10,
-            pointerEvents: 'none',
-          }}
         />
         <Navbar />
         <AnimatedRoutes />
