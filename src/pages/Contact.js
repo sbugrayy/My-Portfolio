@@ -345,7 +345,7 @@ const Contact = () => {
             <i className="fab fa-github"></i>
           </SocialLink>
           <SocialLink
-            href="https://www.linkedin.com/in/buğra-yıldırım"
+            href="https://www.linkedin.com/in/bugra-yildirim"
             target="_blank"
             rel="noopener noreferrer"
             whileHover={{ scale: 1.2, color: '#00ff00' }}
